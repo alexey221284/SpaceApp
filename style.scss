@@ -1,0 +1,116 @@
+/*Colors*/
+
+$blue-color: #2A77FF;
+$white-color: #FFFFFF;
+$light-blue-color: #4553A1;
+
+/* Margins */
+
+$main-margin: 345px / 1920px * 100%;
+
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a {
+  color: $white-color;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+a:hover {
+  color: $blue-color;
+  cursor: pointer;
+}
+
+header {
+  background: url(assets/img/01_background.png);
+  height: 500px;
+
+  .header_top {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 $main-margin;
+    padding-top: 42px;
+
+    .header_top_phone {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+
+      img {
+        margin-right: 10px;
+        width: 24px;
+        height: 24px;
+      }
+    }
+
+    .header_top_email {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+
+      img {
+        margin-right: 19px;
+        width: 22px;
+        height: 18px;
+      }
+    }
+
+    .header_top_v-line {
+      width: 1px;
+      height: 20px;
+      background: $blue-color;
+      margin: 0 20px;
+    }
+
+    .header_top_language {
+      display: flex;
+      flex-direction: row;
+      text-transform: uppercase;
+
+      .active {
+        color: $white-color;
+      }
+
+      .active:hover {
+        color: $white-color;
+        cursor: pointer;
+      }
+
+      .active {
+        color: $blue-color;
+      }
+    }
+  }
+
+  .header_line {
+    background: $light-blue-color;
+    height: 1px;
+    margin: 40px $main-margin;
+  }
+
+  .header_menu {
+    ul {
+      display: flex;
+      flex-direction: row;
+      margin: 0 $main-margin 0 $main-margin;
+    }
+    li {
+      list-style-type: none;
+      margin: 0 10px;
+    }
+  }
+
+  .header_logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 100px;
+  }
+
+}
