@@ -1,3 +1,5 @@
+@import "assets/fonts/montserrat.css";
+
 /*Colors*/
 
 $blue-color: #2A77FF;
@@ -12,6 +14,7 @@ body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: Montserrat, sans-serif;
 }
 
 a {
@@ -27,7 +30,7 @@ a:hover {
 
 header {
   background: url(assets/img/01_background.png);
-  height: 500px;
+  height: 975px;
 
   .header_top {
     display: flex;
@@ -36,6 +39,10 @@ header {
     align-items: center;
     margin: 0 $main-margin;
     padding-top: 42px;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 20px;
 
     .header_top_phone {
       display: flex;
@@ -95,14 +102,21 @@ header {
   }
 
   .header_menu {
+    display: flex;
+    justify-content: center;
+
     ul {
       display: flex;
       flex-direction: row;
-      margin: 0 $main-margin 0 $main-margin;
     }
     li {
       list-style-type: none;
       margin: 0 10px;
+      font-style: normal;
+      font-weight: 600;
+      font-size: 18px;
+      line-height: 22px;
+      letter-spacing: 0.01em;
     }
   }
 
@@ -110,7 +124,6 @@ header {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 100px;
+    margin-top: 211px;
   }
-
 }
