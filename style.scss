@@ -1,14 +1,22 @@
 @import "assets/fonts/montserrat.css";
 
 /*Colors*/
-
 $blue-color: #2A77FF;
 $white-color: #FFFFFF;
 $light-blue-color: #4553A1;
 
 /* Margins */
-
 $main-margin: 345px / 1920px * 100%;
+
+%display-flex-FD-Row {
+  display: flex;
+  flex-direction: row;
+}
+
+%display-flex-FD-Column {
+  display: flex;
+  flex-direction: column;
+}
 
 body {
   margin: 0;
@@ -33,8 +41,7 @@ header {
   height: 975px;
 
   .header_top {
-    display: flex;
-    flex-direction: row;
+    @extend %display-flex-FD-Row;
     justify-content: space-between;
     align-items: center;
     margin: 0 $main-margin;
@@ -45,8 +52,7 @@ header {
     line-height: 20px;
 
     .header_top_phone {
-      display: flex;
-      flex-direction: row;
+      @extend %display-flex-FD-Row;
       align-items: center;
 
       img {
@@ -57,8 +63,7 @@ header {
     }
 
     .header_top_email {
-      display: flex;
-      flex-direction: row;
+      @extend %display-flex-FD-Row;
       align-items: center;
 
       img {
@@ -76,8 +81,7 @@ header {
     }
 
     .header_top_language {
-      display: flex;
-      flex-direction: row;
+      @extend %display-flex-FD-Row;
       text-transform: uppercase;
 
       .active {
@@ -102,13 +106,13 @@ header {
   }
 
   .header_menu {
-    display: flex;
+    @extend %display-flex-FD-Row;
     justify-content: center;
 
     ul {
-      display: flex;
-      flex-direction: row;
+      @extend %display-flex-FD-Row;
     }
+
     li {
       list-style-type: none;
       margin: 0 10px;
@@ -121,9 +125,64 @@ header {
   }
 
   .header_logo {
-    display: flex;
+    @extend %display-flex-FD-Row;
     justify-content: center;
     align-items: center;
     margin-top: 211px;
+  }
+
+  .headerBottom {
+    background: url(assets/img/backgroundBottom.png);
+    margin-top: 230px;
+    height: 220px;
+  }
+}
+
+main {
+
+
+  .main_headBlock {
+    @extend %display-flex-FD-Column;
+    align-items: center;
+
+    h1 {
+      font-size: 48px;
+      line-height: 59px;
+    }
+
+    .main_headBlock_line {
+      width: 180px;
+      height: 1px;
+      background: $blue-color;
+      margin: 40px 0;
+    }
+  }
+
+  ul {
+    @extend %display-flex-FD-Row;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    li {
+      list-style-type: none;
+      margin: 0 30px 80px 0;
+
+      div {
+        @extend %display-flex-FD-Row;
+
+        img {
+          margin-right: 30px;
+        }
+
+        div {
+          @extend %display-flex-FD-Column;
+          width: 390px;
+        }
+      }
+    }
+
+    li:nth-child(2n) {
+      margin-top: 58px;
+    }
   }
 }
