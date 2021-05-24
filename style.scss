@@ -37,7 +37,7 @@ a:hover {
 }
 
 header {
-  background: url(assets/img/backgroundTop.png);
+  background: url(assets/img/background_header.png);
   height: 975px;
 
   .header_top {
@@ -140,7 +140,6 @@ header {
 
 main {
 
-
   .main_headBlock {
     @extend %display-flex-FD-Column;
     align-items: center;
@@ -184,5 +183,55 @@ main {
     li:nth-child(2n) {
       margin-top: 58px;
     }
+  }
+}
+
+
+
+footer {
+  background: url(assets/img/background_footer.png);
+  height: 690px;
+
+  .footer_top {
+    background: url(assets/img/footer_top.png);
+    height: 220px;
+  }
+
+  section {
+    @extend %display-flex-FD-Row;
+    justify-content: center;
+
+    div {
+      width: 600px;
+      height: 319px;
+      margin: 50px 0 0 0;
+      font-style: normal;
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 32px;
+      color: $white-color;
+
+      img {
+        width: 285px;
+        height: 65px;
+      }
+    }
+
+    img {
+      width: 663px;
+      height: 674px;
+      margin-top: -170px;
+    }
+  }
+
+  .footer_bottom {
+    background: url(assets/img/footer_bottom.png);
+    height: 220px;
+    margin-top: -220px;
+  }
+  .footer_superBottom {
+    background: url("assets/img/footer_superBottom.png");
+    height: 160px;
+    margin-top: -160px;
   }
 }

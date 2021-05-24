@@ -1,7 +1,7 @@
 @import "assets/fonts/montserrat.css";
 /*Colors*/
 /* Margins */
-main ul li div, main ul, header .header_logo, header .header_menu ul, header .header_menu, header .header_top .header_top_language, header .header_top .header_top_email, header .header_top .header_top_phone, header .header_top {
+footer section, main ul li div, main ul, header .header_logo, header .header_menu ul, header .header_menu, header .header_top .header_top_language, header .header_top .header_top_email, header .header_top .header_top_phone, header .header_top {
   display: flex;
   flex-direction: row;
 }
@@ -30,7 +30,7 @@ a:hover {
 }
 
 header {
-  background: url(assets/img/backgroundTop.png);
+  background: url(assets/img/background_header.png);
   height: 975px;
 }
 header .header_top {
@@ -135,6 +135,47 @@ main ul li div div {
 }
 main ul li:nth-child(2n) {
   margin-top: 58px;
+}
+
+footer {
+  background: url(assets/img/background_footer.png);
+  height: 690px;
+}
+footer .footer_top {
+  background: url(assets/img/footer_top.png);
+  height: 220px;
+}
+footer section {
+  justify-content: center;
+}
+footer section div {
+  width: 600px;
+  height: 319px;
+  margin: 50px 0 0 0;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 32px;
+  color: #FFFFFF;
+}
+footer section div img {
+  width: 285px;
+  height: 65px;
+}
+footer section img {
+  width: 663px;
+  height: 674px;
+  margin-top: -170px;
+}
+footer .footer_bottom {
+  background: url(assets/img/footer_bottom.png);
+  height: 220px;
+  margin-top: -220px;
+}
+footer .footer_superBottom {
+  background: url("assets/img/footer_superBottom.png");
+  height: 160px;
+  margin-top: -160px;
 }
 
 /*# sourceMappingURL=style.css.map */
