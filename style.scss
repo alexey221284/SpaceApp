@@ -123,6 +123,26 @@ header {
 
 main {
 
+  .octa_01 {
+    position: absolute;
+    top: 1332px;
+  }
+
+  .octaRight {
+    display: flex;
+    justify-content: end;
+    .octa_02 {
+      position: absolute;
+      right: 0;
+      top: 1524px;
+    }
+    .octa_03 {
+      position: absolute;
+      right: 0;
+      top: 706px;
+    }
+  }
+
   .main_headBlock {
     @extend %display-flex-FD-Column;
     align-items: center;

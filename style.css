@@ -94,6 +94,24 @@ header .headerBottom {
   height: 220px;
 }
 
+main .octa_01 {
+  position: absolute;
+  top: 1332px;
+}
+main .octaRight {
+  display: flex;
+  justify-content: end;
+}
+main .octaRight .octa_02 {
+  position: absolute;
+  right: 0;
+  top: 1524px;
+}
+main .octaRight .octa_03 {
+  position: absolute;
+  right: 0;
+  top: 706px;
+}
 main .main_headBlock {
   align-items: center;
 }
