@@ -4,6 +4,8 @@
 $blue-color: #2A77FF;
 $white-color: #FFFFFF;
 $light-blue-color: #4553A1;
+$red-color: #FF391B;
+$deep-blue-color: rgba(20, 1, 81, 0.5);
 
 /* Margins */
 $main-margin: 345px / 1920px * 100%;
@@ -38,7 +40,7 @@ a:hover {
 
 header {
   background: url(assets/img/background_header.png);
-  height: 975px;
+  height: 965px;
 
   .header_top {
     @extend %display-flex-FD-Row;
@@ -105,25 +107,6 @@ header {
     margin: 40px $main-margin;
   }
 
-  .header_menu {
-    @extend %display-flex-FD-Row;
-    justify-content: center;
-
-    ul {
-      @extend %display-flex-FD-Row;
-    }
-
-    li {
-      list-style-type: none;
-      margin: 0 10px;
-      font-style: normal;
-      font-weight: 600;
-      font-size: 18px;
-      line-height: 22px;
-      letter-spacing: 0.01em;
-    }
-  }
-
   .header_logo {
     @extend %display-flex-FD-Row;
     justify-content: center;
@@ -186,8 +169,6 @@ main {
   }
 }
 
-
-
 footer {
   background: url(assets/img/background_footer.png);
   height: 690px;
@@ -200,6 +181,7 @@ footer {
   section {
     @extend %display-flex-FD-Row;
     justify-content: center;
+    margin: 0 0 0 30px;
 
     div {
       width: 600px;
@@ -229,9 +211,108 @@ footer {
     height: 220px;
     margin-top: -220px;
   }
+
   .footer_superBottom {
     background: url("assets/img/footer_superBottom.png");
     height: 160px;
     margin-top: -160px;
   }
+}
+
+/* menu styles */
+
+#mainMenu {padding: 0; margin: 0; border: 0;}
+#mainMenu ul, #mainMenu li {list-style: none; margin: 0; padding: 0;}
+#mainMenu ul {position: relative; z-index: 597; }
+#mainMenu ul li { float: left; min-height: 1px; vertical-align: middle;}
+#mainMenu ul li.hover, #mainMenu ul li:hover {position: relative; z-index: 599; cursor: default;}
+#mainMenu ul ul {visibility: hidden; position: absolute; top: 100%; left: 0; z-index: 598; width: 100%;}
+#mainMenu ul ul li {float: none;}
+#mainMenu ul ul ul {top: 0; left: auto; right: -99.5%; }
+#mainMenu ul li:hover > ul { visibility: visible;}
+#mainMenu ul ul {bottom: 0; left: 0;}
+#mainMenu ul ul {margin-top: 0; }
+#mainMenu ul ul li {font-weight: normal;}
+#mainMenu a { display: block; line-height: 1em; text-decoration: none; }
+
+.header_menu {
+  @extend %display-flex-FD-Row;
+  justify-content: center;
+}
+
+#mainMenu {
+  font-style: normal;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 22px;
+  letter-spacing: 0.01em;
+}
+
+#mainMenu > ul { *display: inline-block; }
+
+#mainMenu:after, #mainMenu ul:after {
+  display: block;
+  clear: both;
+}
+
+#mainMenu a {
+  color: $white-color;
+  padding: 0 10px;
+}
+
+#mainMenu ul ul {
+  text-transform: none;
+  min-width: 190px;
+}
+
+#mainMenu ul ul a {
+  background: $deep-blue-color;
+  color: $white-color;
+  border-top: 0 none;
+  padding: 12px 20px;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 20px;
+  letter-spacing: 0.01em;
+}
+
+#mainMenu ul ul ul { border-top: 0 none; }
+
+#mainMenu ul ul ul a {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 24px;
+}
+
+
+#mainMenu ul ul li { position: relative }
+
+#mainMenu > ul > li > a { line-height: 42px;  }
+
+#mainMenu ul ul li:last-child > a {
+  border-radius: 0 0 3px 3px;
+}
+#mainMenu ul ul li:last-child:hover > a { border-radius: 0 0 0 3px; }
+
+#mainMenu ul ul li.has-sub > a:after {
+  position: absolute;
+  top: 50%;
+  right: 15px;
+  margin-top: -8px;
+}
+
+#mainMenu ul li:hover > a, #mainMenu ul li.active > a {
+  color: $red-color;
+}
+#mainMenu ul li.has-sub > a:after {
+  margin-left: 5px;
+}
+#mainMenu ul li.last ul {
+  left: auto;
+  right: 0;
+}
+#mainMenu ul li.last ul ul {
+  left: auto;
+  right: 99.5%;
 }
